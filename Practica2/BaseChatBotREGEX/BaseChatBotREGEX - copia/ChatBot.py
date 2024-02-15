@@ -4,7 +4,13 @@
 
 import string, re, random, sys
 from conocimiento import conocimientoT
-from ResponseFunctions import contar_chiste, despedida, poner_musica
+from ResponseFunctions import (
+    contar_chiste,
+    contar_funcionamiento,
+    dar_hora,
+    despedida,
+    poner_musica,
+)
 
 
 class ChatBot:
@@ -83,6 +89,12 @@ class ChatBot:
             self.contexto = "CHISTE"
         elif intent == "musica":
             self.contexto = "MUSICA"
+        elif intent == "quien_eres":
+            self.contexto = "QUIEN_ERES"
+        elif intent == "hora":
+            self.contexto = "HORA"
+        elif intent == "funcionamiento":
+            self.contexto = "FUNCIONAMIENTO"
         elif intent == "desconocido":
             self.contexto = "DEFAULT"
 
@@ -119,8 +131,14 @@ class ChatBot:
             return contar_chiste()
         elif intent == "musica":
             return poner_musica()
-        elif intent == "otro":
+        elif intent == "otro_musica":
             return self.da_respuesta_apropiada(user_input)
+        elif intent == "otro_hora":
+            return self.da_respuesta_apropiada(user_input)
+        elif intent == "otro_funcionamiento":
+            return self.da_respuesta_apropiada(user_input)
+        elif intent == "hora":
+            return self.dar_hora()
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)
@@ -138,6 +156,10 @@ class ChatBot:
             return "Aquí va otro: " + contar_chiste()
         elif self.contexto == "MUSICA":
             return "Te dejo otra cancion: " + poner_musica()
+        elif self.contexto == "HORA":
+            return dar_hora()
+        elif self.contexto == "FUNCIONAMIENTO":
+            return contar_funcionamiento()
         elif self.contexto == "DEFAULT":
             return "¿Podrías tratar de expresarte mejor?"
         else:

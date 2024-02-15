@@ -1,4 +1,6 @@
 import os, time, string, random, re
+import requests
+import json
 from random import randrange
 
 
@@ -20,13 +22,41 @@ def contar_chiste():
     return chiste
 
 
+def contar_funcionamiento():
+    """
+    Cuenta un funcionamiento de forma aleatoria
+
+    :return El funcionamiento que se va a contar
+    :rtype str
+    """
+    funcionamientos = [
+        "Basicamente mi objetivo es darte recomendaciones y consejos sobre LOL",
+        "Pues, mi funcion es ayudarte en lo que ocupes del lolsito",
+        "Sirvo para facilitarte informacion de League of Legends ;)",
+        "Pues, supongo que solo soy una ayuda para algo que necesites del GOAT juego",
+    ]
+    funcion = random.choice(funcionamientos)
+    return funcion
+
+
 def poner_musica():
     canciones = [
         "https://www.youtube.com/watch?v=kYtGl1dX5qI",
         "https://www.youtube.com/watch?v=fmI_Ndrxy14",
+        "https://www.youtube.com/watch?v=C3GouGa0noM",
+        "https://www.youtube.com/watch?v=F5tSoaJ93ac",
     ]
     cancion = random.choice(canciones)
     return cancion
+
+
+def dar_hora():
+    response = requests.get(
+        "https://timeapi.io/api/Time/current/zone?timeZone=America/Mexico_City"
+    )
+    json_data = json.loads(response.text)
+    hora = json_data["time"]
+    return hora
 
 
 def despedida(user_input):

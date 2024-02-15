@@ -44,20 +44,73 @@ def conocimientoT():
             "regex": [r".*salir.*", r".*adios.*", r".*bye.*", r".*hasta luego.*"],
             "respuesta": [""],
         },
+        # ////////////////////////////////////////////////Identificacion
+        {
+            "intent": "quien_eres",
+            "regex": [r".*(quien).*(tu).*", r".*(quien).*(eres).*"],
+            "respuesta": [
+                "Excelente pregunta, supongo que solo soy un bot especializado en LOL",
+                "Alguien que esta aqui para ayudarte en lo que este relacionado con LOL",
+                "Si, bueno esa es una buena pregunta, en resumidas cuentas soy un bot de LOL",
+                "Pues me llamo Nexus AI:D",
+            ],
+        },
         # ////////////////////////////////////////////////musica
         {
             "intent": "musica",
-            "regex": [r".*(pon|recomienda)+ (musica)"],
+            "regex": [r".*(pon|recomienda| dame|recomiendame ).* (musica)"],
             "respuesta": [
-                "ahi te va",
+                "ahi te va esta rola",
                 "esta es mi favorita",
+                "chance esta te pueda gustar",
             ],
         },
-        # ////////////////////////////////////////////////otro
+        # ////////////////////////////////////////////////otro(musica)
         {
-            "intent": "otro",
-            "regex": [r"(pon|saca|dame).* otro"],
-            "respuesta": ["Aqui te dejo otra"],
+            "intent": "otro_musica",
+            "regex": [r".*(pon|saca|dame).* otro.*"],
+            "respuesta": [
+                "Aqui te dejo otra ",
+                "Esta cancion es buena ",
+                "va, tambien esta esta ",
+            ],
+        },
+        # ////////////////////////////////////////////////Hora
+        {
+            "intent": "hora",
+            "regex": [r".*\b(hora).*"],
+            "respuesta": [
+                "Yo digo que %1 es al hora excelente para rankear: ",
+            ],
+        },
+        # ////////////////////////////////////////////////otro(hora)
+        {
+            "intent": "otro_hora",
+            "regex": [r".*(enseñamela|dimela|dime).* (de nuevo).*"],
+            "respuesta": [
+                "Sale pues, la hora es %1",
+                "La hora perfecta pa perder LP es %1",
+                "Pues la hora es %1",
+            ],
+        },
+        # ////////////////////////////////////////////////funcionamiento
+        {
+            "intent": "funcionamiento",
+            "regex": [
+                r".*(para que).*(sirves|funciones)",
+                r".*(cual).*(funcion|funciones|funcionalidad |objetivo)",
+            ],
+            "respuesta": [
+                "Basicamente mi objetivo es darte recomendaciones y consejos sobre LOL",
+                "Pues, mi funcion es ayudarte en lo que ocupes del lolsito",
+                "Sirvo para facilitarte informacion de League of Legends ;)",
+            ],
+        },
+        # ////////////////////////////////////////////////otro(funcionamiento)
+        {
+            "intent": "otro_funcionamiento",
+            "regex": [r".*otr(a|o).*(funcionalidad|funcion|objetivo).*"],
+            "respuesta": [""],
         },
         # ////////////////////////////////////////////////Cualquier caso no contemplado.
         {
