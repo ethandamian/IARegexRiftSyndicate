@@ -36,17 +36,17 @@ def run_discord_bot():
             "¿Quieres descargar LOL? aquí tienes:\nhttps://signup.leagueoflegends.com/es-mx/signup/redownload"
         )
 
-    @bot.command()
-    async def matate(ctx):
-        """Te contesta descaradamente"""
-        await ctx.send("Ni sabes jugar bien hazlo tu")
+    # @bot.command()
+    # async def matate(ctx):
+    #     """Te contesta descaradamente"""
+    #     await ctx.send("Ni sabes jugar bien hazlo tu")
 
-    @bot.command()
-    async def rangos(ctx):
-        """ "Muestra los rangos disponibles de lol"""
-        await ctx.send(
-            "-Hierro\n-Bronce\n-Plata\n-Oro\n-Platino\n-Esmeralda\n-Diamante\n-Maestro\n-Gran Maestro\n-Retador"
-        )
+    # @bot.command()
+    # async def rangos(ctx):
+    #     """ "Muestra los rangos disponibles de lol"""
+    #     await ctx.send(
+    #         "-Hierro\n-Bronce\n-Plata\n-Oro\n-Platino\n-Esmeralda\n-Diamante\n-Maestro\n-Gran Maestro\n-Retador"
+    #     )
 
     @bot.event
     async def on_ready():
