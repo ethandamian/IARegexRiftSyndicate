@@ -15,8 +15,8 @@ def get_response(mesagge: str) -> str:
         return "¡Poro! ¡Poro! Estoy bien, gracias por preguntar, ¡Poro!"
 
 
-    if user_message in ["¿quién eres?", "¿quien eres?", "quien eres", "quien eres?"]:
-        return " Soy un botsillo de lol"
+    # if user_message in ["¿quién eres?", "¿quien eres?", "quien eres", "quien eres?"]:
+    #     return " Soy un botsillo de lol"
     
     if user_message in ['¿cuál es tu campeon favorito?','¿cuál es tu campeon favorito?', 'cuál es tu campeon favorito?', 'cual es tu campeon favorito?']:
         return 'oh, mi campeon favorito es Ahri es una maga asesina que se destaca por su movilidad y capacidad para infligir mucho daño. '
@@ -31,11 +31,11 @@ def get_response(mesagge: str) -> str:
     if contains('tu', user_message) and contains('mascota', user_message) and contains_any(['favorita', 'preferida'], user_message):
         return 'Mi mascota favorita es un Poro hacker para poder espiar estrategias enemigas!'
 
-    if (user_message) in ["para que sirves?", "¿para que sirves?", "para que sirves"]:
-        return "Sirvo para facilitarte informacion de League of Legends ;)"
+    # if (user_message) in ["para que sirves?", "¿para que sirves?", "para que sirves"]:
+    #     return "Sirvo para facilitarte informacion de League of Legends ;)"
 
-    if (user_message) in ["que hora es?", "¿que hora es?", "que hora es"]:
-        return "Hora de rankear >:)"
+    # if (user_message) in ["que hora es?", "¿que hora es?", "que hora es"]:
+    #     return "Hora de rankear >:)"
     
 
 
