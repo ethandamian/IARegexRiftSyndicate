@@ -20,7 +20,7 @@ def conocimientoT():
             "intent": "bienvenida",
             "regex": [
                 r".*hola.*",
-                r".*buen(a|o)s (dias|tardes|noches).*",
+                r".*buen(a|o)s (d(i|í)as|tardes|noches).*",
             ],
             "respuesta": ["Ah, Hola... ", "Hola, soy una IA de conversación."],
         },
@@ -41,13 +41,13 @@ def conocimientoT():
         # ////////////////////////////////////////////////Fin.
         {
             "intent": "terminar",
-            "regex": [r".*salir.*", r".*adios.*", r".*bye.*", r".*hasta luego.*"],
+            "regex": [r".*salir.*", r".*adi(o|ó)s.*", r".*bye.*", r".*hasta luego.*"],
             "respuesta": [""],
         },
         # ////////////////////////////////////////////////Identificacion
         {
             "intent": "quien_eres",
-            "regex": [r".*(quien).*(tu).*", r".*(quien).*(eres).*"],
+            "regex": [r".*(qui(e|é)n).*(tu|tú).*", r".*(qui(e|é)n).*(eres).*"],
             "respuesta": [
                 "Excelente pregunta, supongo que solo soy un bot especializado en LOL",
                 "Alguien que esta aqui para ayudarte en lo que este relacionado con LOL",
@@ -81,7 +81,7 @@ def conocimientoT():
             "intent": "hora",
             "regex": [r".*\b(hora).*"],
             "respuesta": [
-                "Yo digo que %1 es al hora excelente para rankear: ",
+                "Yo digo que %1 es la hora excelente para rankear: ",
             ],
         },
         # ////////////////////////////////////////////////otro(hora)
@@ -98,8 +98,8 @@ def conocimientoT():
         {
             "intent": "funcionamiento",
             "regex": [
-                r".*(para que).*(sirves|funciones)",
-                r".*(cual).*(funcion|funciones|funcionalidad |objetivo)",
+                r".*(para qu(e|é)).*(sirves|funcionas)",
+                r".*(cu(a|á)l).*(funci(o|ó)n|funciones|funcionalidad |objetivo)",
             ],
             "respuesta": [
                 "Basicamente mi objetivo es darte recomendaciones y consejos sobre LOL",
