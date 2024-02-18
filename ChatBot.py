@@ -95,6 +95,12 @@ class ChatBot:
             self.contexto = "HORA"
         elif intent == "funcionamiento":
             self.contexto = "FUNCIONAMIENTO"
+        elif intent == "mascota":
+            self.contexto = "MASCOTA"
+        elif intent == "consejo":
+            self.contexto = "CONSEJO"
+        elif intent == "agradecimiento":
+            self.contexto = "AGRADECIMIENTO"
         elif intent == "desconocido":
             self.contexto = "DEFAULT"
 
