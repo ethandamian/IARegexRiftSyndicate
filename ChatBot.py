@@ -144,7 +144,7 @@ class ChatBot:
         elif intent == "otro_funcionamiento":
             return self.da_respuesta_apropiada(user_input)
         elif intent == "hora":
-            return self.dar_hora()
+            return dar_hora()
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)
