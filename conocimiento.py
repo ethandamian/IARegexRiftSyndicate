@@ -58,7 +58,9 @@ def conocimientoT():
         # ////////////////////////////////////////////////musica
         {
             "intent": "musica",
-            "regex": [r".*(pon|recomienda|dame|recomi(e|é)ndame).* (m(u|ú)sica|canci(o|ó)n|rola)"],
+            "regex": [
+                r".*(pon|recomienda|dame|recomi(e|é)ndame).* (m(u|ú)sica|canci(o|ó)n|rola)"
+            ],
             "respuesta": [
                 "ahi te va esta rola",
                 "esta es mi favorita",
@@ -68,8 +70,7 @@ def conocimientoT():
         # ////////////////////////////////////////////////otro(musica)
         {
             "intent": "otro_musica",
-            "regex": [r".*(pon|saca|dame).* otr(o|a).*",
-                      r".*otr(o|a)"],
+            "regex": [r".*(pon|saca|dame).* otr(o|a).*", r".*otr(o|a)"],
             "respuesta": [
                 "Aqui te dejo otra ",
                 "Esta cancion es buena ",
@@ -81,7 +82,9 @@ def conocimientoT():
             "intent": "hora",
             "regex": [r".*\b(hora).*"],
             "respuesta": [
-                "Yo digo que %1 es la hora excelente para rankear: ",
+                "La hora perfecta para rankear es:  ",
+                "Son las: ",
+                "La hora para meterse al lolsito es: ",
             ],
         },
         # ////////////////////////////////////////////////otro(hora)
@@ -89,9 +92,9 @@ def conocimientoT():
             "intent": "otro_hora",
             "regex": [r".*(enseñamela|dimela|dime).* (de nuevo).*"],
             "respuesta": [
-                "Sale pues, la hora es %1",
-                "La hora perfecta pa perder LP es %1",
-                "Pues la hora es %1",
+                "Sale pues, la hora es:",
+                "La hora perfecta pa perder LP es:",
+                "Pues la hora es:",
             ],
         },
         # ////////////////////////////////////////////////funcionamiento
@@ -116,28 +119,40 @@ def conocimientoT():
         # ////////////////////////////////////////////////mascota favorita
         {
             "intent": "mascota",
-            "regex": [r".*(tu mascota).*(favorita|preferida).*",
-                      r".*(tu animal).*(favorito|preferido).*",
-                      r".*(animal).*(mas|más).*(te gusta)"],
-            "respuesta": ['Mi mascota favorita es un Poro hacker para poder espiar estrategias enemigas!',
-                          'Mi mascota favorita es un Poro, son tan adorables!',
-                          'Mi animal favorito es un Poro hacker!'],
+            "regex": [
+                r".*(tu mascota).*(favorita|preferida).*",
+                r".*(tu animal).*(favorito|preferido).*",
+                r".*(animal).*(mas|más).*(te gusta)",
+            ],
+            "respuesta": [
+                "Mi mascota favorita es un Poro hacker para poder espiar estrategias enemigas!",
+                "Mi mascota favorita es un Poro, son tan adorables!",
+                "Mi animal favorito es un Poro hacker!",
+            ],
         },
-         # ////////////////////////////////////////////////consejo
+        # ////////////////////////////////////////////////consejo
         {
             "intent": "consejo",
-            "regex": [r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*"],
-            "respuesta": ['Mi consejo para mejorar en el juego es practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!',
-                          'Diviértete explorando las habilidades de tus campeones favoritos. Cuanto más los conozcas, ¡mejor te irá en las partidas!',
-                          'No olvides echar un vistazo al minimapa. Saber dónde están tus aliados y enemigos es clave para tomar decisiones acertadas.',
-                          'Únete a tu equipo para conquistar dragones, torres y el barón Nashor. ¡Éstos objetivos son la clave de la victoria!',
-                          'Coloca wards para iluminar el mapa. Así podrás evitar sorpresas y emboscadas enemigas.',
-                          'No te rindas. Aprende de cada derrota y sigue adelante. ¡La próxima partida será mejor!'],
+            "regex": [
+                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*"
+            ],
+            "respuesta": [
+                "Mi consejo para mejorar en el juego es practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!",
+                "Diviértete explorando las habilidades de tus campeones favoritos. Cuanto más los conozcas, ¡mejor te irá en las partidas!",
+                "No olvides echar un vistazo al minimapa. Saber dónde están tus aliados y enemigos es clave para tomar decisiones acertadas.",
+                "Únete a tu equipo para conquistar dragones, torres y el barón Nashor. ¡Éstos objetivos son la clave de la victoria!",
+                "Coloca wards para iluminar el mapa. Así podrás evitar sorpresas y emboscadas enemigas.",
+                "No te rindas. Aprende de cada derrota y sigue adelante. ¡La próxima partida será mejor!",
+            ],
         },
         {
             "intent": "agradecimiento",
             "regex": [r".*(gracias|agradecid(o|a)).*"],
-            "respuesta": ["Me da gusto haber sido de ayuda", "De nada, para eso estoy", "No hay de qué, para eso estoy"],
+            "respuesta": [
+                "Me da gusto haber sido de ayuda",
+                "De nada, para eso estoy",
+                "No hay de qué, para eso estoy",
+            ],
         },
         # ////////////////////////////////////////////////Cualquier caso no contemplado.
         {
@@ -150,6 +165,5 @@ def conocimientoT():
             ],
         },
         # ////////////////////////////////////////////////
-
     ]
     return conocimiento
