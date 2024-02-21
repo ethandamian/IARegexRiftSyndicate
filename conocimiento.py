@@ -102,7 +102,7 @@ def conocimientoT():
             "intent": "champion_lore",
             "regex": [
                 r".*\b(Aatrox|Ahri|Akali|Akshan|Alistar|Amumu|Anivia|Annie|Aphelios|Ashe|AurelionSol|Azir|Bard|Belveth|Blitzcrank|Brand|Braum|Briar|Caitlyn|Camille|Cassiopeia|Chogath|Corki|Darius|Diana|Draven|DrMundo|Ekko|Elise|Evelynn|Ezreal|Fiddlesticks|Fiora|Fizz|Galio|Gangplank|Garen|Gnar|Gragas|Graves|Gwen|Hecarim|Heimerdinger|Hwei|Illaoi|Irelia|Ivern|Janna|JarvanIV|Jax|Jayce|Jhin|Jinx|Kaisa|Kalista|Karma|Karthus|Kassadin|Katarina|Kayle|Kayn|Kennen|Khazix|Kindred|Kled|KogMaw|KSante|Leblanc|LeeSin|Leona|Lillia|Lissandra|Lucian|Lulu|Lux|Malphite|Malzahar|Maokai|MasterYi|Milio|MissFortune|MonkeyKing|Mordekaiser|Morgana|Naafiri|Nami|Nasus|Nautilus|Neeko|Nidalee|Nilah|Nocturne|Nunu|Olaf|Orianna|Ornn|Pantheon|Poppy|Pyke|Qiyana|Quinn|Rakan|Rammus|RekSai|Rell|Renata|Renekton|Rengar|Riven|Rumble|Ryze|Samira|Sejuani|Senna|Seraphine|Sett|Shaco|Shen|Shyvana|Singed|Sion|Sivir|Skarner|Smolder|Sona|Soraka|Swain|Sylas|Syndra|TahmKench|Taliyah|Talon|Taric|Teemo|Thresh|Tristana|Trundle|Tryndamere|TwistedFate|Twitch|Udyr|Urgot|Varus|Vayne|Veigar|Velkoz|Vex|Vi|Viego|Viktor|Vladimir|Volibear|Warwick|Xayah|Xerath|XinZhao|Yasuo|Yone|Yorick|Yuumi|Zac|Zed|Zeri|Ziggs|Zilean|Zoe|Zyra).*",
-                r".*(cuenta|dime|cuentame|hablame|platicame|ahora).*(la historia|el lore|sobre|acerca).*(Aatrox|Ahri|Akali|Akshan|Alistar|Amumu|Anivia|Annie|Aphelios|Ashe|AurelionSol|Azir|Bard|Belveth|Blitzcrank|Brand|Braum|Briar|Caitlyn|Camille|Cassiopeia|Chogath|Corki|Darius|Diana|Draven|DrMundo|Ekko|Elise|Evelynn|Ezreal|Fiddlesticks|Fiora|Fizz|Galio|Gangplank|Garen|Gnar|Gragas|Graves|Gwen|Hecarim|Heimerdinger|Hwei|Illaoi|Irelia|Ivern|Janna|JarvanIV|Jax|Jayce|Jhin|Jinx|Kaisa|Kalista|Karma|Karthus|Kassadin|Katarina|Kayle|Kayn|Kennen|Khazix|Kindred|Kled|KogMaw|KSante|Leblanc|LeeSin|Leona|Lillia|Lissandra|Lucian|Lulu|Lux|Malphite|Malzahar|Maokai|MasterYi|Milio|MissFortune|MonkeyKing|Mordekaiser|Morgana|Naafiri|Nami|Nasus|Nautilus|Neeko|Nidalee|Nilah|Nocturne|Nunu|Olaf|Orianna|Ornn|Pantheon|Poppy|Pyke|Qiyana|Quinn|Rakan|Rammus|RekSai|Rell|Renata|Renekton|Rengar|Riven|Rumble|Ryze|Samira|Sejuani|Senna|Seraphine|Sett|Shaco|Shen|Shyvana|Singed|Sion|Sivir|Skarner|Smolder|Sona|Soraka|Swain|Sylas|Syndra|TahmKench|Taliyah|Talon|Taric|Teemo|Thresh|Tristana|Trundle|Tryndamere|TwistedFate|Twitch|Udyr|Urgot|Varus|Vayne|Veigar|Velkoz|Vex|Vi|Viego|Viktor|Vladimir|Volibear|Warwick|Xayah|Xerath|XinZhao|Yasuo|Yone|Yorick|Yuumi|Zac|Zed|Zeri|Ziggs|Zilean|Zoe|Zyra).* ",
+                r".*(cuenta|dime|cuentame|hablame|platicame|ahora).*(la historia|el lore|sobre|acerca|de).*(Aatrox|Ahri|Akali|Akshan|Alistar|Amumu|Anivia|Annie|Aphelios|Ashe|AurelionSol|Azir|Bard|Belveth|Blitzcrank|Brand|Braum|Briar|Caitlyn|Camille|Cassiopeia|Chogath|Corki|Darius|Diana|Draven|DrMundo|Ekko|Elise|Evelynn|Ezreal|Fiddlesticks|Fiora|Fizz|Galio|Gangplank|Garen|Gnar|Gragas|Graves|Gwen|Hecarim|Heimerdinger|Hwei|Illaoi|Irelia|Ivern|Janna|JarvanIV|Jax|Jayce|Jhin|Jinx|Kaisa|Kalista|Karma|Karthus|Kassadin|Katarina|Kayle|Kayn|Kennen|Khazix|Kindred|Kled|KogMaw|KSante|Leblanc|LeeSin|Leona|Lillia|Lissandra|Lucian|Lulu|Lux|Malphite|Malzahar|Maokai|MasterYi|Milio|MissFortune|MonkeyKing|Mordekaiser|Morgana|Naafiri|Nami|Nasus|Nautilus|Neeko|Nidalee|Nilah|Nocturne|Nunu|Olaf|Orianna|Ornn|Pantheon|Poppy|Pyke|Qiyana|Quinn|Rakan|Rammus|RekSai|Rell|Renata|Renekton|Rengar|Riven|Rumble|Ryze|Samira|Sejuani|Senna|Seraphine|Sett|Shaco|Shen|Shyvana|Singed|Sion|Sivir|Skarner|Smolder|Sona|Soraka|Swain|Sylas|Syndra|TahmKench|Taliyah|Talon|Taric|Teemo|Thresh|Tristana|Trundle|Tryndamere|TwistedFate|Twitch|Udyr|Urgot|Varus|Vayne|Veigar|Velkoz|Vex|Vi|Viego|Viktor|Vladimir|Volibear|Warwick|Xayah|Xerath|XinZhao|Yasuo|Yone|Yorick|Yuumi|Zac|Zed|Zeri|Ziggs|Zilean|Zoe|Zyra).* ",
             ],
             "respuesta": [""],
         },
@@ -143,17 +143,16 @@ def conocimientoT():
         {
             "intent": "consejo",
             "regex": [
-                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*"
+                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*",
+                r".*(c(ó|o)mo).*(mejoro).*",
             ],
             "respuesta": [
-                "Claro.", "Por supuesto."
+                "Te puedo recomendar lo siguiente: "
             ],
         },
         {
             "intent": "rol_mas_popular",
-            "regex": [
-                r".*(rol).*(m(a|á)s)*.*(popular|famoso|conocido)*.*"
-            ],
+            "regex": [r".*(rol).*(m(a|á)s)*.*(popular|famoso|conocido)*.*"],
             "respuesta": [
                 "Como tal no hay un rol más popular en League of Legends, pero el de tirador (ADC) y media suelen ser comunes."
             ],
@@ -169,59 +168,36 @@ def conocimientoT():
         },
         {
             "intent": "grieta_del_invocador",
-            "regex": [
-                r".*((grieta|rift) de(l)* invocador).*"
-            ],
+            "regex": [r".*((grieta|rift) de(l)* invocador).*"],
             "respuesta": [
                 "La Grieta del Invocador es el mapa principal de League of Legends, donde se llevan a cabo las partidas. Está dividido en tres calles, con torres y súbditos enemigos, y una jungla con monstruos neutrales y objetivos como el Barón Nashor y los dragones elementales. Es el mapa más emblemático del juego y el más jugado por la comunidad."
             ],
         },
         {
             "intent": "lineas",
-            "regex": [
-                r".*(l(i|í)neas).*(hay|existen)*.*"
-            ],
-            "respuesta": [
-                "Existen tres líneas en League of Legends"
-            ],
+            "regex": [r".*(l(i|í)neas).*(hay|existen)*.*"],
+            "respuesta": ["Existen tres líneas en League of Legends"],
         },
         {
             "intent": "linea_superior",
-            "regex": [
-                r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"
-            ],
-            "respuesta": [
-                ""
-            ],
+            "regex": [r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"],
+            "respuesta": [""],
         },
         {
             "intent": "jungla",
-            "regex": [
-                r".*(jungla).*"
-            ],
-            "respuesta": [
-                ""
-            ],
+            "regex": [r".*(jungla).*"],
+            "respuesta": [""],
         },
         {
             "intent": "linea_del_medio",
-            "regex": [
-                r".*(l(i|í)nea).*(medio).*"
-            ],
-            "respuesta": [
-                ""
-            ],
+            "regex": [r".*(l(i|í)nea).*(medio).*"],
+            "respuesta": [""],
         },
         {
             "intent": "linea_inferior",
-            "regex": [
-                r".*(l(i|í)nea).*(inferior|bot).*"
-            ],
-            "respuesta": [
-                ""
-            ],
+            "regex": [r".*(l(i|í)nea).*(inferior|bot).*"],
+            "respuesta": [""],
         },
-        
         {
             "intent": "agradecimiento",
             "regex": [r".*(gracias|agradecid(o|a)).*"],
