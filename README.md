@@ -42,5 +42,38 @@ Algunos de los intents en el bot son:
 * __"numero_campeones"__
   - **Regex:** `r".*(cuantos campeones hay en lol?|cual es el numero de campeones de lol?).*"`
   
+ * __"mascota"__
+  - **Regex:** `r".*(tu mascota).*(favorita|preferida).*",
+                r".*(tu animal).*(favorito|preferido).*",
+                r".*(animal).*(mas|más).*(te gusta).*"`
+* __"consejo"__
+  - **Regex:** `r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*",
+                r".*(c(ó|o)mo).*(mejoro).*"`
+    
+* __"rol_mas_popular"__
+  - **Regex:** `r".*(rol).*(m(a|á)s)*.*(popular|famoso|conocido)*.*"`
 
+* __"sistema_de_clasificacion"__
+  - **Regex:** `r".*(funci(o|ó)n|funcionamiento|funciona).*(clasificaci(o|ó)n|clasificar)*.*"`
+ 
+* __"grieta_del_invocador"__
+  - **Regex:** `r".*((grieta|rift) de(l)* invocador).*"`
+ 
+ * __"lineas"__
+  - **Regex:** `r".*(l(i|í)nea).*(medio).*"`
+
+ * __"linea_superior"__
+   - **Regex:** `r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"`
+
+* __"jungla"__
+  - **Regex:** `r".*(jungla).*"`
+
+ * __"linea_del_medio"__
+  - **Regex:** `r".*(l(i|í)nea).*(medio).*"`
+
+* __"linea_inferior"__
+  - **Regex:** `r".*(l(i|í)nea).*(inferior|bot).*"`
+
+ * __"agradecimiento"__
+  - **Regex:** `r".*(gracias|agradecid(o|a)).*"`
 
