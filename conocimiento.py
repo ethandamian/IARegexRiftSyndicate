@@ -140,10 +140,11 @@ def conocimientoT():
         {
             "intent": "consejo",
             "regex": [
-                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*"
+                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*",
+                r".*(c(ó|o)mo).*(mejoro).*",
             ],
             "respuesta": [
-                "Claro.", "Por supuesto."
+                "Te puedo recomendar lo siguiente: "
             ],
         },
         {
