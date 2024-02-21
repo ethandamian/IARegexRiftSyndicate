@@ -40,21 +40,30 @@ def contar_funcionamiento():
     return funcion
 
 
-def dar_champion_info(champion):
-    """
-    Devuelve la información de un campeón
+def extraer_nombre_campeon(cadena):
+    patron = r"\b(?:Aatrox|Ahri|Akali|Akshan|Alistar|Amumu|Anivia|Annie|Aphelios|Ashe|AurelionSol|Azir|Bard|Belveth|Blitzcrank|Brand|Braum|Briar|Caitlyn|Camille|Cassiopeia|Chogath|Corki|Darius|Diana|Draven|DrMundo|Ekko|Elise|Evelynn|Ezreal|Fiddlesticks|Fiora|Fizz|Galio|Gangplank|Garen|Gnar|Gragas|Graves|Gwen|Hecarim|Heimerdinger|Hwei|Illaoi|Irelia|Ivern|Janna|JarvanIV|Jax|Jayce|Jhin|Jinx|Kaisa|Kalista|Karma|Karthus|Kassadin|Katarina|Kayle|Kayn|Kennen|Khazix|Kindred|Kled|KogMaw|KSante|Leblanc|LeeSin|Leona|Lillia|Lissandra|Lucian|Lulu|Lux|Malphite|Malzahar|Maokai|MasterYi|Milio|MissFortune|MonkeyKing|Mordekaiser|Morgana|Naafiri|Nami|Nasus|Nautilus|Neeko|Nidalee|Nilah|Nocturne|Nunu|Olaf|Orianna|Ornn|Pantheon|Poppy|Pyke|Qiyana|Quinn|Rakan|Rammus|RekSai|Rell|Renata|Renekton|Rengar|Riven|Rumble|Ryze|Samira|Sejuani|Senna|Seraphine|Sett|Shaco|Shen|Shyvana|Singed|Sion|Sivir|Skarner|Smolder|Sona|Soraka|Swain|Sylas|Syndra|TahmKench|Taliyah|Talon|Taric|Teemo|Thresh|Tristana|Trundle|Tryndamere|TwistedFate|Twitch|Udyr|Urgot|Varus|Vayne|Veigar|Velkoz|Vex|Vi|Viego|Viktor|Vladimir|Volibear|Warwick|Xayah|Xerath|XinZhao|Yasuo|Yone|Yorick|Yuumi|Zac|Zed|Zeri|Ziggs|Zilean|Zoe|Zyra)\b"
+    match = re.search(patron, cadena, re.IGNORECASE)
+    if match:
 
-    :param str champion: El campeón del que se quiere obtener información
-    :return La información del campeón
-    :rtype str
-    """
-    champion_json_file = champion + ".json"
-    try:
-        champion_data = getattr(champion, champion_json_file)
-        info = champion_data  # You may need to parse the JSON data here if it's not already loaded
-        return info
-    except AttributeError:
-        return "Champion information not found"
+        return match.group(0)
+    else:
+        return None
+
+
+def dar_champion_info(champ):
+    # champ_name = extraer_nombre_campeon(champ)
+    champ_file = champ + ".json"  # Nombre del archivo basado en el nombre del campeón
+    champ_path = os.path.join(
+        "champion", champ_file
+    )  # Ruta relativa al directorio actual
+
+    if os.path.exists(champ_path):
+        with open(champ_path, "r", encoding="utf-8") as f:
+            champ_data = json.load(f)
+            lore = champ_data["data"][champ]["lore"]
+            return lore
+    else:
+        return "No se encontró información para este campeón."
 
 
 def poner_musica():
@@ -73,7 +82,7 @@ def dar_hora():
         "https://timeapi.io/api/Time/current/zone?timeZone=America/Mexico_City"
     )
     json_data = json.loads(response.text)
-    hora = json_data["time"]
+    hora = json_data["name"]
     return hora
 
 

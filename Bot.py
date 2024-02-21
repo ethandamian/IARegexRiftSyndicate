@@ -18,7 +18,7 @@ async def send_message(message, user_message, is_private):
 
 def run_discord_bot():
     cypherToker = b"\xd4,{+\xdbs\xeb~\x02\x12\x90Z\x0e\x8c\x1f1\xd2\xf2\xffn~\x84\xf9^v\xbf\xc2\xf2\xf2\x18\xad\x97\xae<\x91\x11r\xd6\x9d{%\xa5C\xdb\x15\xd9\x9b\x8e~Qt\r\x12\xad/\x9fb}\xeaF\x05\x8e\x01\xe0\xfc7g'F`Bqh\xb36\xc8H\xe8\xc9\xaf"
-    TOKEN = str(decipher(cypherToker).decode('utf-8'))
+    TOKEN = str(decipher(cypherToker).decode("utf-8"))
 
     intents = discord.Intents.default()
     intents.message_content = True
@@ -96,10 +96,11 @@ def run_discord_bot():
 
         print(f"{username} said: {user_message} in {channel}")
 
-        if (
-            isinstance(message.channel, discord.TextChannel)
-            and message.channel.name == "bot-testing"
-        ):
+        if isinstance(
+            message.channel, discord.TextChannel
+        ) and message.channel.name in [
+            "bot-testing-gael",
+        ]:
             if user_message.startswith("!priv"):
                 user_message = user_message[5:]  # Eliminar el comando "!priv"
                 await send_message(message, user_message, is_private=True)
