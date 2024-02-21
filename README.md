@@ -2,6 +2,7 @@
 
 ## Link del Bot 
 Con el siguiente link se puede agregar el bot a un canal 
+<br>
 https://discord.com/api/oauth2/authorize?client_id=1204854598028759112&permissions=0&scope=bot
 
 >[!IMPORTANT]
