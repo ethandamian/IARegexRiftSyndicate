@@ -9,13 +9,14 @@ from ResponseFunctions import (
     contar_funcionamiento,
     dar_hora,
     despedida,
+    extraer_nombre_campeon,
     poner_musica,
     dar_champion_info,
     dar_recomendacion,
     linea_superior,
     jungla,
     linea_del_medio,
-    linea_inferior
+    linea_inferior,
 )
 
 
@@ -99,8 +100,8 @@ class ChatBot:
             self.contexto = "QUIEN_ERES"
         elif intent == "hora":
             self.contexto = "HORA"
-        elif intent == "aatrox":
-            self.contexto = "AATROX"
+        elif intent == "champion_lore":
+            self.contexto = "CHAMPION_LORE"
         elif intent == "funcionamiento":
             self.contexto = "FUNCIONAMIENTO"
         elif intent == "mascota":
@@ -120,9 +121,9 @@ class ChatBot:
         elif intent == "jungla":
             self.contexto = "JUNGLA"
         elif intent == "linea_del_medio":
-            self.contexto = "LINEA_MEDIA" 
+            self.contexto = "LINEA_MEDIA"
         elif intent == "linea_inferior":
-            self.contexto = "LINEA_INFERIOR"   
+            self.contexto = "LINEA_INFERIOR"
         elif intent == "agradecimiento":
             self.contexto = "AGRADECIMIENTO"
         elif intent == "desconocido":
@@ -169,12 +170,30 @@ class ChatBot:
             return self.da_respuesta_apropiada(user_input)
         elif intent == "hora":
             return dar_hora()
-        elif intent == "aatrox":
-            return dar_champion_info(user_input)
+        elif intent == "champion_lore":
+            nombre_champ = extraer_nombre_campeon(user_input)
+            if nombre_champ:
+                return dar_champion_info(nombre_champ)
+            else:
+                return (
+                    "No conozco a ese champ. Chance te entendere mejor si me das el nombre solo con la primera en mayuscula, sin espacios tipo: "
+                    "TwistedFate"
+                    " o "
+                    "MissFortune"
+                    ""
+                )
         elif intent == "consejo":
             return dar_recomendacion()
         elif intent == "lineas":
-            return linea_superior() + "\n" + jungla() + "\n" + linea_del_medio() + "\n" + linea_inferior()
+            return (
+                linea_superior()
+                + "\n"
+                + jungla()
+                + "\n"
+                + linea_del_medio()
+                + "\n"
+                + linea_inferior()
+            )
         elif intent == "linea_superior":
             return linea_superior()
         elif intent == "jungla":
