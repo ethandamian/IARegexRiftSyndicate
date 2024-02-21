@@ -276,3 +276,12 @@ def regiones():
     return regiones[llave_random]
     
 
+def quizes():
+    links = ['https://www.sporcle.com/games/flux_capacitor/lol_champs?t=leagueoflegends',
+             'http://leagueabilityquiz.com/',
+             'https://quizizz.com/admin/quiz/5d03c12b47d580001a74fab1/league-of-legends',
+             'https://triviacreator.com/quiz/EjZQFPPEf',
+             'https://triviacreator.com/quiz/XYGxC9Y',
+             'https://loldle.net/']
+    
+    return random.choice(links)

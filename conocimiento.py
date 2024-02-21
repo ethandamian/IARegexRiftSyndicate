@@ -236,6 +236,17 @@ def conocimientoT():
             ],
         },
 
+        # ////////////////////////////////////////////////QUIZ
+        {
+            "intent": "quiz",
+            "regex": [r".*(Q|q)uiero poner a prueba mis conocimientos.*",r".*(quiz|cuestionario).*",r".*Ponme a prueba.*",r".*((N|n)ecesito|(Q|q)uiero)? *(aprender|saber)? *(mas).*"],
+            "respuesta": [
+                "Claro, aqui tienes un quiz",
+                "A la orden, te dejo un quiz para que pongas a prueba tus conocimientos",
+                "Si le sabes, responde este quiz",
+            ],
+        },
+
         # ////////////////////////////////////////////////Cualquier caso no contemplado.
         {
             "intent": "desconocido",
