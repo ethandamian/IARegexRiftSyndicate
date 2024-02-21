@@ -2,6 +2,7 @@ import os, time, string, random, re
 import requests
 import json
 from random import randrange
+from champion import *
 
 
 def contar_chiste():
@@ -37,6 +38,23 @@ def contar_funcionamiento():
     ]
     funcion = random.choice(funcionamientos)
     return funcion
+
+
+def dar_champion_info(champion):
+    """
+    Devuelve la información de un campeón
+
+    :param str champion: El campeón del que se quiere obtener información
+    :return La información del campeón
+    :rtype str
+    """
+    champion_json_file = champion + ".json"
+    try:
+        champion_data = getattr(champion, champion_json_file)
+        info = champion_data  # You may need to parse the JSON data here if it's not already loaded
+        return info
+    except AttributeError:
+        return "Champion information not found"
 
 
 def poner_musica():
