@@ -17,6 +17,8 @@ from ResponseFunctions import (
     jungla,
     linea_del_medio,
     linea_inferior,
+    contar_historia,
+    regiones
 )
 
 
@@ -126,6 +128,10 @@ class ChatBot:
             self.contexto = "LINEA_INFERIOR"
         elif intent == "agradecimiento":
             self.contexto = "AGRADECIMIENTO"
+        elif intent == "historia":
+            self.contexto = "HISTORIA"
+        elif intent == "region":
+            self.contexto = "REGION"
         elif intent == "desconocido":
             self.contexto = "DEFAULT"
 
@@ -202,6 +208,16 @@ class ChatBot:
             return linea_del_medio()
         elif intent == "linea_inferior":
             return linea_inferior()
+        elif intent == "aatrox":
+            return dar_champion_info(user_input)
+        elif intent == "historia":
+            return contar_historia()
+        elif intent == "otra_historia":
+            return self.da_respuesta_apropiada(user_input)
+        
+        elif intent == "region":
+            return regiones()
+
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)
@@ -223,6 +239,8 @@ class ChatBot:
             return dar_hora()
         elif self.contexto == "FUNCIONAMIENTO":
             return contar_funcionamiento()
+        elif self.contexto == "HISTORIA":
+            return contar_historia()
         elif self.contexto == "DEFAULT":
             return "¿Podrías tratar de expresarte mejor?"
         else:
