@@ -10,6 +10,7 @@ from ResponseFunctions import (
     dar_hora,
     despedida,
     poner_musica,
+    dar_champion_info,
 )
 
 
@@ -93,6 +94,8 @@ class ChatBot:
             self.contexto = "QUIEN_ERES"
         elif intent == "hora":
             self.contexto = "HORA"
+        elif intent == "aatrox":
+            self.contexto = "AATROX"
         elif intent == "funcionamiento":
             self.contexto = "FUNCIONAMIENTO"
         elif intent == "mascota":
@@ -145,6 +148,8 @@ class ChatBot:
             return self.da_respuesta_apropiada(user_input)
         elif intent == "hora":
             return dar_hora()
+        elif intent == "aatrox":
+            return dar_champion_info(user_input)
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)

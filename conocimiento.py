@@ -97,6 +97,12 @@ def conocimientoT():
                 "Pues la hora es:",
             ],
         },
+        # ////////////////////////////////////////////////Aatrox
+        {
+            "intent": "aatrox",
+            "regex": [r".*\b(Aatrox).*"],
+            "respuesta": [""],
+        },
         # ////////////////////////////////////////////////funcionamiento
         {
             "intent": "funcionamiento",
