@@ -70,7 +70,7 @@ def conocimientoT():
         # ////////////////////////////////////////////////otro(musica)
         {
             "intent": "otro_musica",
-            "regex": [r".*(pon|saca|dame).* otr(o|a).*", r".*otr(o|a)"],
+            "regex": [r".*(pon|saca|dame).* otr(o|a).*"],
             "respuesta": [
                 "Aqui te dejo otra ",
                 "Esta cancion es buena ",
@@ -207,6 +207,60 @@ def conocimientoT():
                 "No hay de qué, para eso estoy",
             ],
         },
+
+        #INICIA PARTE ROGER
+        {
+            "intent": "preferencia_campeon",
+            "regex": [r".*(cual es tu campeon favorito?|dime tu campeon favorito|cuál es tu campeon favorito?).*"],
+            "respuesta": [
+                'oh, mi campeon favorito es Ahri es una maga asesina que se destaca por su movilidad y capacidad para infligir mucho daño. ',
+            ],
+        },
+
+        {
+            "intent": "preferencia_posicion",
+            "regex": [r".*(cual es tu posición favorita?|dime tu posicion favorita|cuál es tu posición favorita?|cual es tu posicion favorita?).*"],
+            "respuesta": [
+                'Mi posición favorita es mid :D',
+            ],
+        },
+
+        {
+            "intent": "numero_campeones",
+            "regex": [r".*(cuantos campeones hay en lol?|cual es el numero de campeones de lol?).*"],
+            "respuesta": [
+                'Actualmente hay 140 campeones de lol',
+            ],
+        },
+        {
+            "intent": "consejos_farmeo",
+            "regex": [r".*(necesito mejorar mi farmeo).*"],
+            "respuesta": [
+                'Practica el last-hitting en partidas personalizadas para perfeccionar tu habilidad. Conoce el daño de tus habilidades y utiliza ataques básicos para obtener el último golpe en los súbditos. Observa el patrón de ataque de los súbditos enemigos y anticipa cuándo lanzar tus ataques. En las fases tempranas, prioriza el farmeo sobre el pokeo para acumular oro de manera eficiente. Usa habilidades para farmear bajo torres y ajusta tu movimiento en el mapa para llegar a las oleadas a tiempo. Conoce tu rol y adapta tu enfoque según la situación de la partida. Ajusta tu build para mejorar tu capacidad de farmeo y mantén la visión del mapa para evitar emboscadas enemigas. La práctica constante te ayudará a mejorar tu habilidad para obtener oro de manera efectiva durante la partida.',
+            ],
+        },
+        {
+            "intent": "muestra_cinematica",
+            "regex": [r".*(enseñame|muestrame|dame).*(una cinematica.)*"],
+            "respuesta": [
+                'Ahì te va, esta me encanta',
+                'Esta me encanta mira',
+                'Aqui tienes',
+            ],
+        },
+        {
+            "intent": "otra_cinematica",
+            "regex": [r".*otr(a|o).*(cinematica).*"],
+            "respuesta": [" "],
+        },
+        {
+            "intent": "que_campeon_soy",
+            "regex": [r".*(dime|que).*(campeon soy.)*"],
+            "respuesta": [
+                'Contesta este quiz para ver de que campeon eres',
+            ],
+        },
+        #FINALIZA PARTE ROGER
 
         # ////////////////////////////////////////////////CONTAR UNA HISTORIA
         {

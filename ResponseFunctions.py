@@ -4,6 +4,18 @@ import json
 from random import randrange
 from champion import *
 
+def muestra_quiz_campeon():
+    return "https://psycatgames.com/es/quiz/which-league-of-legends-champion-am-i/"
+
+def muestra_cinematica():
+    cinematicas = [
+        "https://www.youtube.com/watch?v=ZHhqwBwmRkI",
+        "https://www.youtube.com/watch?v=zF5Ddo9JdpY",
+        "https://www.youtube.com/watch?v=aR-KAldshAE",
+        "https://www.youtube.com/watch?v=vzHrjOMfHPY",
+    ]
+    cinematica = random.choice(cinematicas)
+    return cinematica
 
 def contar_chiste():
     """
