@@ -85,6 +85,30 @@ def dar_hora():
     hora = json_data["name"]
     return hora
 
+def dar_recomendacion():
+    consejos = [
+            "Mi consejo para mejorar en el juego es practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!",
+            "Diviértete explorando las habilidades de tus campeones favoritos. Cuanto más los conozcas, ¡mejor te irá en las partidas!",
+            "No olvides echar un vistazo al minimapa. Saber dónde están tus aliados y enemigos es clave para tomar decisiones acertadas.",
+            "Únete a tu equipo para conquistar dragones, torres y el barón Nashor. ¡Éstos objetivos son la clave de la victoria!",
+            "Coloca wards para iluminar el mapa. Así podrás evitar sorpresas y emboscadas enemigas.",
+            "No te rindas. Aprende de cada derrota y sigue adelante. ¡La próxima partida será mejor!",
+            ]
+    return random.choice(consejos)
+
+def linea_superior():
+    return "Línea superior: Está situada en la parte superior del mapa. Sin importar si estás del lado azul (con tu base abajo a la izquierda) o en el lado rojo (con tu base arriba a la derecha), esta línea siempre será la superior. Los jugadores en la línea superior suelen decir que es una isla, ya que estos campeones reciben la menor cantidad de ayuda de las otras líneas a través del juego."
+    
+def jungla():
+    return "Jungla: La jungla es el área entre las líneas de la parte superior, media e inferior del mapa. Los jugadores que eligen campeones de jungla no se quedan en una línea, sino que se mueven por la jungla, matando monstruos y ayudando a sus compañeros de equipo en las líneas. Los jugadores de jungla son conocidos por ser los que más ayudan a sus compañeros de equipo a lo largo del juego."
+    
+def linea_del_medio():
+    return "Línea del medio: La línea del medio está situada en el centro del mapa. Los jugadores en la línea del medio suelen ser campeones que tienen habilidades de ataque a distancia o habilidades que les permiten moverse rápidamente por el mapa. Los jugadores de la línea del medio suelen ser los que más daño infligen a lo largo del juego."
+    
+def linea_inferior():
+    return "Línea inferior: La línea inferior está situada en la parte inferior del mapa. Los jugadores en la línea inferior suelen ser campeones que tienen habilidades de ataque a distancia o habilidades que les permiten curar a sus compañeros de equipo. Los jugadores de la línea inferior suelen ser los que más daño infligen a lo largo del juego."
+    
+
 
 def despedida(user_input):
     """

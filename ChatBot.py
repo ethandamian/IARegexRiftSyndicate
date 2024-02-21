@@ -12,6 +12,11 @@ from ResponseFunctions import (
     extraer_nombre_campeon,
     poner_musica,
     dar_champion_info,
+    dar_recomendacion,
+    linea_superior,
+    jungla,
+    linea_del_medio,
+    linea_inferior,
 )
 
 
@@ -103,6 +108,22 @@ class ChatBot:
             self.contexto = "MASCOTA"
         elif intent == "consejo":
             self.contexto = "CONSEJO"
+        elif intent == "rol_mas_popular":
+            self.contexto = "ROL_MAS_POPULAR"
+        elif intent == "sistema_de_clasificacion":
+            self.contexto = "SISTEMA_DE_CLASIFICACION"
+        elif intent == "grieta_del_invocador":
+            self.contexto = "GRIETA_DEL_INVOCADOR"
+        elif intent == "lineas":
+            self.contexto = "LINEAS"
+        elif intent == "linea_superior":
+            self.contexto = "LINEA_SUPERIOR"
+        elif intent == "jungla":
+            self.contexto = "JUNGLA"
+        elif intent == "linea_del_medio":
+            self.contexto = "LINEA_MEDIA"
+        elif intent == "linea_inferior":
+            self.contexto = "LINEA_INFERIOR"
         elif intent == "agradecimiento":
             self.contexto = "AGRADECIMIENTO"
         elif intent == "desconocido":
@@ -161,6 +182,26 @@ class ChatBot:
                     "MissFortune"
                     ""
                 )
+        elif intent == "consejo":
+            return dar_recomendacion()
+        elif intent == "lineas":
+            return (
+                linea_superior()
+                + "\n"
+                + jungla()
+                + "\n"
+                + linea_del_medio()
+                + "\n"
+                + linea_inferior()
+            )
+        elif intent == "linea_superior":
+            return linea_superior()
+        elif intent == "jungla":
+            return jungla()
+        elif intent == "linea_del_medio":
+            return linea_del_medio()
+        elif intent == "linea_inferior":
+            return linea_inferior()
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)

@@ -131,7 +131,7 @@ def conocimientoT():
             "regex": [
                 r".*(tu mascota).*(favorita|preferida).*",
                 r".*(tu animal).*(favorito|preferido).*",
-                r".*(animal).*(mas|más).*(te gusta)",
+                r".*(animal).*(mas|más).*(te gusta).*",
             ],
             "respuesta": [
                 "Mi mascota favorita es un Poro hacker para poder espiar estrategias enemigas!",
@@ -143,17 +143,85 @@ def conocimientoT():
         {
             "intent": "consejo",
             "regex": [
-                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*"
+                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*"
             ],
             "respuesta": [
-                "Mi consejo para mejorar en el juego es practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!",
-                "Diviértete explorando las habilidades de tus campeones favoritos. Cuanto más los conozcas, ¡mejor te irá en las partidas!",
-                "No olvides echar un vistazo al minimapa. Saber dónde están tus aliados y enemigos es clave para tomar decisiones acertadas.",
-                "Únete a tu equipo para conquistar dragones, torres y el barón Nashor. ¡Éstos objetivos son la clave de la victoria!",
-                "Coloca wards para iluminar el mapa. Así podrás evitar sorpresas y emboscadas enemigas.",
-                "No te rindas. Aprende de cada derrota y sigue adelante. ¡La próxima partida será mejor!",
+                "Claro.", "Por supuesto."
             ],
         },
+        {
+            "intent": "rol_mas_popular",
+            "regex": [
+                r".*(rol).*(m(a|á)s)*.*(popular|famoso|conocido)*.*"
+            ],
+            "respuesta": [
+                "Como tal no hay un rol más popular en League of Legends, pero el de tirador (ADC) y media suelen ser comunes."
+            ],
+        },
+        {
+            "intent": "sistema_de_clasificacion",
+            "regex": [
+                r".*(funci(o|ó)n|funcionamiento|funciona).*(clasificaci(o|ó)n|clasificar)*.*"
+            ],
+            "respuesta": [
+                "El sistema de clasificación de LOL se basa en Ligas y Divisiones, como Bronce, Plata, Oro, Platino, Diamante, Maestro, Gran Maestro o Retador. Cada Liga tiene cuatro divisiones, excepto Maestro, Gran Maestro y Retador. El objetivo es ganar partidas clasificatorias para subir de división o ascender de Liga. A medida que ganas partidas, ganas Puntos de Liga (LP), y al alcanzar cierta cantidad, puedes disputar una serie para avanzar. Ganar la serie te lleva a la siguiente división o Liga, mientras que perder disminuye tus LP y puede incluso hacer que caigas de división o Liga. El sistema también incluye promociones, donde debes ganar una serie de partidas consecutivas para ascender a una nueva Liga. Además, existen los puntos de Maestría para campeones específicos, que se ganan al jugar bien con un campeón en partidas clasificatorias. El rendimiento individual y del equipo, así como el MMR (Matchmaking Rating), también influyen en cuántos LP ganas o pierdes en cada partida."
+            ],
+        },
+        {
+            "intent": "grieta_del_invocador",
+            "regex": [
+                r".*((grieta|rift) de(l)* invocador).*"
+            ],
+            "respuesta": [
+                "La Grieta del Invocador es el mapa principal de League of Legends, donde se llevan a cabo las partidas. Está dividido en tres calles, con torres y súbditos enemigos, y una jungla con monstruos neutrales y objetivos como el Barón Nashor y los dragones elementales. Es el mapa más emblemático del juego y el más jugado por la comunidad."
+            ],
+        },
+        {
+            "intent": "lineas",
+            "regex": [
+                r".*(l(i|í)neas).*(hay|existen)*.*"
+            ],
+            "respuesta": [
+                "Existen tres líneas en League of Legends"
+            ],
+        },
+        {
+            "intent": "linea_superior",
+            "regex": [
+                r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"
+            ],
+            "respuesta": [
+                ""
+            ],
+        },
+        {
+            "intent": "jungla",
+            "regex": [
+                r".*(jungla).*"
+            ],
+            "respuesta": [
+                ""
+            ],
+        },
+        {
+            "intent": "linea_del_medio",
+            "regex": [
+                r".*(l(i|í)nea).*(medio).*"
+            ],
+            "respuesta": [
+                ""
+            ],
+        },
+        {
+            "intent": "linea_inferior",
+            "regex": [
+                r".*(l(i|í)nea).*(inferior|bot).*"
+            ],
+            "respuesta": [
+                ""
+            ],
+        },
+        
         {
             "intent": "agradecimiento",
             "regex": [r".*(gracias|agradecid(o|a)).*"],
