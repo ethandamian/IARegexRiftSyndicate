@@ -1,6 +1,6 @@
-# Tarea de Laboratorio #3: Modelando un ChatBot
+# Tarea de Laboratorio #3: Modelando un ChatBot 👾
 
-## Link del Bot 
+## Link del Bot 🔗
 Con el siguiente link se puede agregar el bot a un canal 
 <br>
 https://discord.com/api/oauth2/authorize?client_id=1204854598028759112&permissions=0&scope=bot
@@ -8,11 +8,16 @@ https://discord.com/api/oauth2/authorize?client_id=1204854598028759112&permissio
 >[!IMPORTANT]
 > Para que el bot funciones correctamente, se debe tener conversacion con el en un canal que se llame "bot-testing-general" 
 
-## Comportamientos que quisimos desarrollar
+## Link del repositorio 🔗
+El link del repositorio del proyecto se encuentra en el siguiente link
+<br>
+https://github.com/ethandamian/IARegexRiftSyndicate
+
+## Comportamientos que quisimos desarrollar ⁉️
 
 Este bot lo realizamos con la intención de que contestara cosas sobre League of Legends, usando expresiones regulares.
 
-## Intents usados y regex
+## Intents usados y regex ✳️
 
 Algunos de los intents en el bot son:
 
