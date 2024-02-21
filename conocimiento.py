@@ -22,7 +22,7 @@ def conocimientoT():
                 r".*hola.*",
                 r".*buen(a|o)s (d(i|í)as|tardes|noches).*",
             ],
-            "respuesta": ["Ah, Hola... ", "Hola, soy una IA de conversación."],
+            "respuesta": ["Ah, Hola...", "Hola, soy una IA de conversación."],
         },
         # ////////////////////////////////////////////////Chiste.
         {
@@ -231,6 +231,35 @@ def conocimientoT():
                 "No hay de qué, para eso estoy",
             ],
         },
+
+        # ////////////////////////////////////////////////CONTAR UNA HISTORIA
+        {
+            "intent": "historia",
+            "regex": [r".*(cuentame|cuenta|dime|echate)*(una)?historia.*"],
+            "respuesta": [
+                "Claro, aqui tienes una",
+            ],
+        },
+        {
+            "intent": "otra_historia",
+            "regex": [r".*(cuenta|dime|echate|cuentame)?otra.*"],
+            "respuesta": [
+                "Claro, aqui tienes otra",
+                "Va, aqui tienes otra",
+                "Si quieres otra, aqui tienes",
+            ],
+        },
+        # ////////////////////////////////////////////////REGIONES
+        {
+            "intent": "region",
+            "regex": [r".*((C|c)uentame|dime) de las regiones de (LOL|lol).*", r".*regiones.*"],
+            "respuesta": [
+                "Claro, aqui tienes informacion sobre una region:",
+                "Aqui tienes informacion interesante:",
+                "Por supuesto, te explico:",
+            ],
+        },
+
         # ////////////////////////////////////////////////Cualquier caso no contemplado.
         {
             "intent": "desconocido",
