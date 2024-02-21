@@ -167,7 +167,7 @@ def conocimientoT():
         {
             "intent": "grieta_del_invocador",
             "regex": [
-                r".*(grieta de(l)* invocador).*"
+                r".*((grieta|rift) de(l)* invocador).*"
             ],
             "respuesta": [
                 "La Grieta del Invocador es el mapa principal de League of Legends, donde se llevan a cabo las partidas. Está dividido en tres calles, con torres y súbditos enemigos, y una jungla con monstruos neutrales y objetivos como el Barón Nashor y los dragones elementales. Es el mapa más emblemático del juego y el más jugado por la comunidad."
