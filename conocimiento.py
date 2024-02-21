@@ -143,9 +143,12 @@ def conocimientoT():
         {
             "intent": "consejo",
             "regex": [
-                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*"
+                r".*(recomendaci(o|ó)n|recomienda|recomi(é|e)ndame|consejo|recomendar).*(mejorar)*.*",
+                r".*(c(ó|o)mo).*(mejoro).*",
             ],
-            "respuesta": ["Claro.", "Por supuesto."],
+            "respuesta": [
+                "Te puedo recomendar lo siguiente: "
+            ],
         },
         {
             "intent": "rol_mas_popular",

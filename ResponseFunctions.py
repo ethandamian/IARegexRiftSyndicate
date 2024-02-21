@@ -87,7 +87,7 @@ def dar_hora():
 
 def dar_recomendacion():
     consejos = [
-            "Mi consejo para mejorar en el juego es practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!",
+            "Para mejorar en el juego debes practicar, aprender de cada derrota y ¡divertirse en la Grieta del Invocador!",
             "Diviértete explorando las habilidades de tus campeones favoritos. Cuanto más los conozcas, ¡mejor te irá en las partidas!",
             "No olvides echar un vistazo al minimapa. Saber dónde están tus aliados y enemigos es clave para tomar decisiones acertadas.",
             "Únete a tu equipo para conquistar dragones, torres y el barón Nashor. ¡Éstos objetivos son la clave de la victoria!",
