@@ -18,7 +18,8 @@ from ResponseFunctions import (
     linea_del_medio,
     linea_inferior,
     contar_historia,
-    regiones
+    regiones,
+    quizes
 )
 
 
@@ -132,6 +133,9 @@ class ChatBot:
             self.contexto = "HISTORIA"
         elif intent == "region":
             self.contexto = "REGION"
+
+        elif intent == "quiz":
+            self.contexto = "QUIZ"
         elif intent == "desconocido":
             self.contexto = "DEFAULT"
 
@@ -217,7 +221,8 @@ class ChatBot:
         
         elif intent == "region":
             return regiones()
-
+        elif intent == "quiz":
+            return quizes()
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)
