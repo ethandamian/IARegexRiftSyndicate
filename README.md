@@ -32,3 +32,15 @@ Algunos de los intents en el bot son:
 
 * __"otro_hora"__
   - **Regex:** `r".*(enseñamela|dimela|dime).* (de nuevo).*"`
+
+* __"muestra_cinematica"__
+  - **Regex:** `r".*(enseñame|muestrame|dame).*(una cinematica.)*"`
+
+* __"que_campeon_soy"__
+  - **Regex:** `r".*(dime|que).*(campeon soy.)*"`
+
+* __"numero_campeones"__
+  - **Regex:** `r".*(cuantos campeones hay en lol?|cual es el numero de campeones de lol?).*"`
+  
+
+

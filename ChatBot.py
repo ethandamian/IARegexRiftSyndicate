@@ -10,6 +10,8 @@ from ResponseFunctions import (
     dar_hora,
     despedida,
     extraer_nombre_campeon,
+    muestra_cinematica,
+    muestra_quiz_campeon,
     poner_musica,
     dar_champion_info,
     dar_recomendacion,
@@ -133,7 +135,20 @@ class ChatBot:
             self.contexto = "HISTORIA"
         elif intent == "region":
             self.contexto = "REGION"
-
+        # INICIA PARTE ROGER
+        elif intent == "preferencia_campeon":
+            self.contexto = "PREFERENCIA_CAMPEON"
+        elif intent == "preferencia_posicion":
+            self.contexto = "PREFERENCIA_POSICION"
+        elif intent == "numero_campeones":
+            self.contexto = "NUMERO_CAMPEONES"
+        elif intent == "consejos_farmeo":
+            self.contexto = "CONSEJOS_FARMEO"
+        elif intent == "muestra_cinematica":
+            self.contexto = "MUESTRA_CINEMATICA" 
+        elif intent == "que_campeon_soy":
+            self.contexto = "QUE_CAMPEON_SOY"    
+        # FINALIZA PARTE ROGER
         elif intent == "quiz":
             self.contexto = "QUIZ"
         elif intent == "desconocido":
@@ -181,7 +196,13 @@ class ChatBot:
         elif intent == "hora":
             return dar_hora()
         elif intent == "champion_lore":
-            nombre_champ = extraer_nombre_campeon(user_input)
+            nombre_champ = extraer_nombre_campeon()
+        elif intent == "muestra_cinematica":
+            return muestra_cinematica()
+        elif intent == "que_campeon_soy":
+            return muestra_quiz_campeon()
+        elif intent == "otra_cinematica":
+            return self.da_respuesta_apropiada(user_input)
             if nombre_champ:
                 return dar_champion_info(nombre_champ)
             else:
@@ -242,6 +263,8 @@ class ChatBot:
             return "Te dejo otra cancion: " + poner_musica()
         elif self.contexto == "HORA":
             return dar_hora()
+        elif self.contexto == "MUESTRA_CINEMATICA":
+            return muestra_cinematica()
         elif self.contexto == "FUNCIONAMIENTO":
             return contar_funcionamiento()
         elif self.contexto == "HISTORIA":

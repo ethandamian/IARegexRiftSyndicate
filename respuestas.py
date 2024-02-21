@@ -18,11 +18,11 @@ def get_response(mesagge: str) -> str:
     # if user_message in ["¿quién eres?", "¿quien eres?", "quien eres", "quien eres?"]:
     #     return " Soy un botsillo de lol"
     
-    if user_message in ['¿cuál es tu campeon favorito?','¿cuál es tu campeon favorito?', 'cuál es tu campeon favorito?', 'cual es tu campeon favorito?']:
-        return 'oh, mi campeon favorito es Ahri es una maga asesina que se destaca por su movilidad y capacidad para infligir mucho daño. '
+    #if user_message in ['¿cuál es tu campeon favorito?','¿cuál es tu campeon favorito?', 'cuál es tu campeon favorito?', 'cual es tu campeon favorito?']:
+    #    return 'oh, mi campeon favorito es Ahri es una maga asesina que se destaca por su movilidad y capacidad para infligir mucho daño. '
     
-    if user_message in ['¿cuál es tu posición preferida?','¿cual es tu posición preferida?', 'cuál es tu posición preferida?', 'cual es tu posición preferida?']:
-        return 'Mi posición favorita es mid :D'
+    #if user_message in ['¿cuál es tu posición preferida?','¿cual es tu posición preferida?', 'cuál es tu posición preferida?', 'cual es tu posición preferida?']:
+    #    return 'Mi posición favorita es mid :D'
 
     # Give me if statemenst to check for messages related to the gaame league of legends
     if contains_any(['recomendación', 'recomendacion', 'recomienda', 'recomiéndame', 'consejo', 'recomendar'], user_message) or (contains('mejorar', user_message)):
