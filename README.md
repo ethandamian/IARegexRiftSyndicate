@@ -42,7 +42,7 @@ Algunos de los intents en el bot son:
 * __"numero_campeones"__
   - **Regex:** `r".*(cuantos campeones hay en lol?|cual es el numero de campeones de lol?).*"`
   
- * __"mascota"__
+* __"mascota"__
   - **Regex:** `r".*(tu mascota).*(favorita|preferida).*",
                 r".*(tu animal).*(favorito|preferido).*",
                 r".*(animal).*(mas|más).*(te gusta).*"`
@@ -59,21 +59,21 @@ Algunos de los intents en el bot son:
 * __"grieta_del_invocador"__
   - **Regex:** `r".*((grieta|rift) de(l)* invocador).*"`
  
- * __"lineas"__
+* __"lineas"__
   - **Regex:** `r".*(l(i|í)nea).*(medio).*"`
 
- * __"linea_superior"__
-   - **Regex:** `r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"`
+* __"linea_superior"__
+  - **Regex:** `r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"`
 
 * __"jungla"__
   - **Regex:** `r".*(jungla).*"`
 
- * __"linea_del_medio"__
+* __"linea_del_medio"__
   - **Regex:** `r".*(l(i|í)nea).*(medio).*"`
 
 * __"linea_inferior"__
   - **Regex:** `r".*(l(i|í)nea).*(inferior|bot).*"`
 
- * __"agradecimiento"__
+* __"agradecimiento"__
   - **Regex:** `r".*(gracias|agradecid(o|a)).*"`
 
