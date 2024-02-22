@@ -99,7 +99,7 @@ def run_discord_bot():
         if isinstance(
             message.channel, discord.TextChannel
         ) and message.channel.name in [
-            "bot-testing-general"
+            "bot-testing-general", "general"
         ]:
             if user_message.startswith("!priv"):
                 user_message = user_message[5:]  # Eliminar el comando "!priv"

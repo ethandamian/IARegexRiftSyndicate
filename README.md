@@ -78,3 +78,4 @@ Algunos de los intents en el bot son:
   - **Regex:** `r".*(gracias|agradecid(o|a)).*"`
 * __"historia"__
   - **Regex:** `r".*(cuentame|cuenta|dime|echate)*(una)?historia.*"`
+
