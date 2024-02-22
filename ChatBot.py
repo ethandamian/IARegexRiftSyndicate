@@ -196,13 +196,7 @@ class ChatBot:
         elif intent == "hora":
             return dar_hora()
         elif intent == "champion_lore":
-            nombre_champ = extraer_nombre_campeon()
-        elif intent == "muestra_cinematica":
-            return muestra_cinematica()
-        elif intent == "que_campeon_soy":
-            return muestra_quiz_campeon()
-        elif intent == "otra_cinematica":
-            return self.da_respuesta_apropiada(user_input)
+            nombre_champ = extraer_nombre_campeon(user_input)
             if nombre_champ:
                 return dar_champion_info(nombre_champ)
             else:
@@ -213,6 +207,12 @@ class ChatBot:
                     "MissFortune"
                     ""
                 )
+        elif intent == "muestra_cinematica":
+            return muestra_cinematica()
+        elif intent == "que_campeon_soy":
+            return muestra_quiz_campeon()
+        elif intent == "otra_cinematica":
+            return self.da_respuesta_apropiada(user_input)
         elif intent == "consejo":
             return dar_recomendacion()
         elif intent == "lineas":
@@ -233,8 +233,6 @@ class ChatBot:
             return linea_del_medio()
         elif intent == "linea_inferior":
             return linea_inferior()
-        elif intent == "aatrox":
-            return dar_champion_info(user_input)
         elif intent == "historia":
             return contar_historia()
         elif intent == "otra_historia":
