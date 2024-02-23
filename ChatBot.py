@@ -97,6 +97,10 @@ class ChatBot:
         intent = caso["intent"]
         if intent == "bienvenida":
             self.contexto = "BIENVENIDA"
+        elif intent == "saludo":
+            self.contexto = "SALUDO"
+        elif intent == "que_haces":
+            self.contexto = "QUE_HACES"
         elif intent == "chiste":
             self.contexto = "CHISTE"
         elif intent == "musica":
@@ -151,6 +155,10 @@ class ChatBot:
         # FINALIZA PARTE ROGER
         elif intent == "quiz":
             self.contexto = "QUIZ"
+        elif intent == "ok":
+            self.contexto = "OK"
+        elif intent == "no":
+            self.contexto = "NO"
         elif intent == "desconocido":
             self.contexto = "DEFAULT"
 
@@ -237,11 +245,12 @@ class ChatBot:
             return contar_historia()
         elif intent == "otra_historia":
             return self.da_respuesta_apropiada(user_input)
-        
         elif intent == "region":
             return regiones()
         elif intent == "quiz":
             return quizes()
+        elif intent == "otro":
+            return self.da_respuesta_apropiada(user_input)
         elif intent == "terminar":
             print(despedida(user_input))
             sys.exit(0)
@@ -267,6 +276,8 @@ class ChatBot:
             return contar_funcionamiento()
         elif self.contexto == "HISTORIA":
             return contar_historia()
+        elif self.contexto == "CONSEJO":
+            return dar_recomendacion()
         elif self.contexto == "DEFAULT":
             return "¿Podrías tratar de expresarte mejor?"
         else:

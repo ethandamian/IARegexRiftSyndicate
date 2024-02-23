@@ -15,6 +15,22 @@ def conocimientoT():
     :rtype str
     """
     conocimiento = [
+        # //////////////////////////////////////////////// Saludo
+        {
+            "intent": "saludo",
+            "regex": [
+                r".*c(ó|o)mo est(a|á)s.*",
+            ],
+            "respuesta": ["Estoy bien, gracias!", "Todo bien por aquí, gracias!"],
+        },
+        # //////////////////////////////////////////////// pregunta de lo que hace en el momento
+        {
+            "intent": "que_haces",
+            "regex": [
+                r".*qu(e|é).*(haces|haciendo).*",
+            ],
+            "respuesta": ["Estoy aquí, observando el campo de batalla y viendo las tácticas dde los invocadores", "Estoy aquí mirando cómo cambian las estadísticas de los campeones"],
+        },
         # ////////////////////////////////////////////////Bienvenida.
         {
             "intent": "bienvenida",
@@ -22,15 +38,16 @@ def conocimientoT():
                 r".*hola.*",
                 r".*buen(a|o)s (d(i|í)as|tardes|noches).*",
             ],
-            "respuesta": ["Ah, Hola...", "Hola, soy una IA de conversación."],
+            "respuesta": ["Hola!", "Hola, soy una IA de conversación."],
         },
+        
         # ////////////////////////////////////////////////Chiste.
         {
             "intent": "chiste",
             "regex": [r".*chiste.*", r".*broma.*"],
             "respuesta": ["Bien", "Ahí te va"],
         },
-        # ////////////////////////////////////////////////Chiste.
+        # //////////////////////////////////////////////// Como se siente el usuario
         {
             "intent": "estado",
             "regex": [
@@ -38,13 +55,13 @@ def conocimientoT():
             ],
             "respuesta": ["Por que te sientes %1"],
         },
-        # ////////////////////////////////////////////////Fin.
+        # //////////////////////////////////////////////// Fin.
         {
             "intent": "terminar",
             "regex": [r".*salir.*", r".*adi(o|ó)s.*", r".*bye.*", r".*hasta luego.*"],
             "respuesta": [""],
         },
-        # ////////////////////////////////////////////////Identificacion
+        # //////////////////////////////////////////////// Identificacion
         {
             "intent": "quien_eres",
             "regex": [r".*(qui(e|é)n).*(tu|tú).*", r".*(qui(e|é)n).*(eres).*"],
@@ -55,7 +72,7 @@ def conocimientoT():
                 "Pues me llamo Nexus AI:D",
             ],
         },
-        # ////////////////////////////////////////////////musica
+        # //////////////////////////////////////////////// musica
         {
             "intent": "musica",
             "regex": [
@@ -67,7 +84,7 @@ def conocimientoT():
                 "chance esta te pueda gustar",
             ],
         },
-        # ////////////////////////////////////////////////otro(musica)
+        # //////////////////////////////////////////////// otro(musica)
         {
             "intent": "otro_musica",
             "regex": [r".*(pon|saca|dame).* otr(o|a).*"],
@@ -77,7 +94,7 @@ def conocimientoT():
                 "va, tambien esta esta ",
             ],
         },
-        # ////////////////////////////////////////////////Hora
+        # //////////////////////////////////////////////// Hora
         {
             "intent": "hora",
             "regex": [r".*\b(hora).*"],
@@ -87,7 +104,7 @@ def conocimientoT():
                 "La hora para meterse al lolsito es: ",
             ],
         },
-        # ////////////////////////////////////////////////otro(hora)
+        # //////////////////////////////////////////////// otro(hora)
         {
             "intent": "otro_hora",
             "regex": [r".*(enseñamela|dimela|dime).* (de nuevo).*"],
@@ -97,7 +114,7 @@ def conocimientoT():
                 "Pues la hora es:",
             ],
         },
-        # ////////////////////////////////////////////////Aatrox
+        # //////////////////////////////////////////////// Aatrox
         {
             "intent": "champion_lore",
             "regex": [
@@ -106,7 +123,7 @@ def conocimientoT():
             ],
             "respuesta": [""],
         },
-        # ////////////////////////////////////////////////funcionamiento
+        # //////////////////////////////////////////////// funcionamiento
         {
             "intent": "funcionamiento",
             "regex": [
@@ -119,13 +136,13 @@ def conocimientoT():
                 "Sirvo para facilitarte informacion de League of Legends ;)",
             ],
         },
-        # ////////////////////////////////////////////////otro(funcionamiento)
+        # //////////////////////////////////////////////// otro(funcionamiento)
         {
             "intent": "otro_funcionamiento",
             "regex": [r".*otr(a|o).*(funcionalidad|funcion|objetivo).*"],
             "respuesta": [""],
         },
-        # ////////////////////////////////////////////////mascota favorita
+        # //////////////////////////////////////////////// mascota favorita
         {
             "intent": "mascota",
             "regex": [
@@ -139,7 +156,7 @@ def conocimientoT():
                 "Mi animal favorito es un Poro hacker!",
             ],
         },
-        # ////////////////////////////////////////////////consejo
+        # //////////////////////////////////////////////// consejo
         {
             "intent": "consejo",
             "regex": [
@@ -150,6 +167,7 @@ def conocimientoT():
                 "Te puedo recomendar lo siguiente: "
             ],
         },
+        # //////////////////////////////////////////////// rol mas popular del juego
         {
             "intent": "rol_mas_popular",
             "regex": [r".*(rol).*(m(a|á)s)*.*(popular|famoso|conocido)*.*"],
@@ -157,6 +175,7 @@ def conocimientoT():
                 "Como tal no hay un rol más popular en League of Legends, pero el de tirador (ADC) y media suelen ser comunes."
             ],
         },
+        # //////////////////////////////////////////////// sistema de clasificacion
         {
             "intent": "sistema_de_clasificacion",
             "regex": [
@@ -166,6 +185,7 @@ def conocimientoT():
                 "El sistema de clasificación de LOL se basa en Ligas y Divisiones, como Bronce, Plata, Oro, Platino, Diamante, Maestro, Gran Maestro o Retador. Cada Liga tiene cuatro divisiones, excepto Maestro, Gran Maestro y Retador. El objetivo es ganar partidas clasificatorias para subir de división o ascender de Liga. A medida que ganas partidas, ganas Puntos de Liga (LP), y al alcanzar cierta cantidad, puedes disputar una serie para avanzar. Ganar la serie te lleva a la siguiente división o Liga, mientras que perder disminuye tus LP y puede incluso hacer que caigas de división o Liga. El sistema también incluye promociones, donde debes ganar una serie de partidas consecutivas para ascender a una nueva Liga. Además, existen los puntos de Maestría para campeones específicos, que se ganan al jugar bien con un campeón en partidas clasificatorias. El rendimiento individual y del equipo, así como el MMR (Matchmaking Rating), también influyen en cuántos LP ganas o pierdes en cada partida."
             ],
         },
+        # //////////////////////////////////////////////// grieta del invocador
         {
             "intent": "grieta_del_invocador",
             "regex": [r".*((grieta|rift) de(l)* invocador).*"],
@@ -173,31 +193,37 @@ def conocimientoT():
                 "La Grieta del Invocador es el mapa principal de League of Legends, donde se llevan a cabo las partidas. Está dividido en tres calles, con torres y súbditos enemigos, y una jungla con monstruos neutrales y objetivos como el Barón Nashor y los dragones elementales. Es el mapa más emblemático del juego y el más jugado por la comunidad."
             ],
         },
+        # //////////////////////////////////////////////// lineas de juego
         {
             "intent": "lineas",
             "regex": [r".*(l(i|í)neas).*(hay|existen)*.*"],
             "respuesta": ["Existen tres líneas en League of Legends"],
         },
+        # //////////////////////////////////////////////// linea superior
         {
             "intent": "linea_superior",
             "regex": [r".*(l(i|í)nea).*(superior|bar(o|ó)n).*"],
             "respuesta": [""],
         },
+        # //////////////////////////////////////////////// jungla
         {
             "intent": "jungla",
             "regex": [r".*(jungla).*"],
             "respuesta": [""],
         },
+        # //////////////////////////////////////////////// linea del medio
         {
             "intent": "linea_del_medio",
             "regex": [r".*(l(i|í)nea).*(medio).*"],
             "respuesta": [""],
         },
+        # //////////////////////////////////////////////// linea inferior
         {
             "intent": "linea_inferior",
             "regex": [r".*(l(i|í)nea).*(inferior|bot).*"],
             "respuesta": [""],
         },
+        # //////////////////////////////////////////////// agradecer
         {
             "intent": "agradecimiento",
             "regex": [r".*(gracias|agradecid(o|a)).*"],
@@ -208,7 +234,7 @@ def conocimientoT():
             ],
         },
 
-        #INICIA PARTE ROGER
+        # //////////////////////////////////////////////// preferencia del campeon
         {
             "intent": "preferencia_campeon",
             "regex": [r".*(cual es tu campeon favorito?|dime tu campeon favorito|cuál es tu campeon favorito?).*"],
@@ -216,7 +242,7 @@ def conocimientoT():
                 'oh, mi campeon favorito es Ahri es una maga asesina que se destaca por su movilidad y capacidad para infligir mucho daño. ',
             ],
         },
-
+        # //////////////////////////////////////////////// preferencia de posicion
         {
             "intent": "preferencia_posicion",
             "regex": [r".*(cual es tu posición favorita?|dime tu posicion favorita|cuál es tu posición favorita?|cual es tu posicion favorita?).*"],
@@ -224,14 +250,15 @@ def conocimientoT():
                 'Mi posición favorita es mid :D',
             ],
         },
-
+        # //////////////////////////////////////////////// numero de campeones en el juego
         {
             "intent": "numero_campeones",
-            "regex": [r".*(cuantos campeones hay en lol?|cual es el numero de campeones de lol?).*"],
+            "regex": [r".*(cuantos campeones hay( en lol(\?)*)*|cual es el numero de campeones( de lol(\?)*)*).*"],
             "respuesta": [
                 'Actualmente hay 140 campeones de lol',
             ],
         },
+        # //////////////////////////////////////////////// consejos para farmeo
         {
             "intent": "consejos_farmeo",
             "regex": [r".*(necesito mejorar mi farmeo).*"],
@@ -239,6 +266,7 @@ def conocimientoT():
                 'Practica el last-hitting en partidas personalizadas para perfeccionar tu habilidad. Conoce el daño de tus habilidades y utiliza ataques básicos para obtener el último golpe en los súbditos. Observa el patrón de ataque de los súbditos enemigos y anticipa cuándo lanzar tus ataques. En las fases tempranas, prioriza el farmeo sobre el pokeo para acumular oro de manera eficiente. Usa habilidades para farmear bajo torres y ajusta tu movimiento en el mapa para llegar a las oleadas a tiempo. Conoce tu rol y adapta tu enfoque según la situación de la partida. Ajusta tu build para mejorar tu capacidad de farmeo y mantén la visión del mapa para evitar emboscadas enemigas. La práctica constante te ayudará a mejorar tu habilidad para obtener oro de manera efectiva durante la partida.',
             ],
         },
+        # //////////////////////////////////////////////// mostrar cinematica
         {
             "intent": "muestra_cinematica",
             "regex": [r".*(enseñame|muestrame|dame).*(una cinematica.)*"],
@@ -248,19 +276,20 @@ def conocimientoT():
                 'Aqui tienes',
             ],
         },
+        # //////////////////////////////////////////////// mostrar otra cinematica
         {
             "intent": "otra_cinematica",
             "regex": [r".*otr(a|o).*(cinematica).*"],
             "respuesta": [" "],
         },
+        # //////////////////////////////////////////////// qué campeon soy
         {
             "intent": "que_campeon_soy",
-            "regex": [r".*(dime|que).*(campeon soy.)*"],
+            "regex": [r".*(dime|que).*(campeon soy.).*"],
             "respuesta": [
                 'Contesta este quiz para ver de que campeon eres',
             ],
         },
-        #FINALIZA PARTE ROGER
 
         # ////////////////////////////////////////////////CONTAR UNA HISTORIA
         {
@@ -270,6 +299,7 @@ def conocimientoT():
                 "Claro, aqui tienes una",
             ],
         },
+        # //////////////////////////////////////////////// contar otra historia
         {
             "intent": "otra_historia",
             "regex": [r".*(cuenta|dime|echate|cuentame)?otra.*"],
@@ -279,7 +309,7 @@ def conocimientoT():
                 "Si quieres otra, aqui tienes",
             ],
         },
-        # ////////////////////////////////////////////////REGIONES
+        # //////////////////////////////////////////////// REGIONES
         {
             "intent": "region",
             "regex": [r".*((C|c)uentame|dime) de las regiones de (LOL|lol).*", r".*regiones.*"],
@@ -290,7 +320,7 @@ def conocimientoT():
             ],
         },
 
-        # ////////////////////////////////////////////////QUIZ
+        # //////////////////////////////////////////////// QUIZ
         {
             "intent": "quiz",
             "regex": [r".*(Q|q)uiero poner a prueba mis conocimientos.*",r".*(quiz|cuestionario).*",r".*Ponme a prueba.*",r".*((N|n)ecesito|(Q|q)uiero)? *(aprender|saber)? *(mas).*"],
@@ -300,8 +330,33 @@ def conocimientoT():
                 "Si le sabes, responde este quiz",
             ],
         },
+        
+         # //////////////////////////////////////////////// otro QUIZ
+        {
+            "intent": "otro",
+            "regex": [r".*otr(o|a)*"],
+            "respuesta": [
+                ""
+            ],
+        },
+         # //////////////////////////////////////////////// entendido
+        {
+            "intent": "ok",
+            "regex": [r".*ok.*",r".*entiendo.*",r".*entendido.*", r".*de acuerdo.*", r".*vale.*", r".*bien.*", r".*bueno.*", r".*claro.*", r".*perfecto.*", r".*s(í|i).*", r".*\ba\b.*", r".*aj(a|á).*"],
+            "respuesta": [
+                "Bien", "Entendido", "Ok"
+            ],
+        },
+         # //////////////////////////////////////////////// no
+        {
+            "intent": "no",
+            "regex": [r".*no.*"],
+            "respuesta": [
+                "Por qué dices que no, seamos optimistas!", "Cómo que no, pregúntame sobre algún campeón!"
+            ],
+        },
 
-        # ////////////////////////////////////////////////Cualquier caso no contemplado.
+        # //////////////////////////////////////////////// Cualquier caso no contemplado.
         {
             "intent": "desconocido",
             "regex": [r".*"],
